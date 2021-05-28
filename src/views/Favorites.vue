@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NavBar :header="header" />
     <div>
       <b-form-input v-model="text" />
     </div>
@@ -24,11 +25,16 @@
 </template>
 
 <script>
+import NavBar from "../components/NavBar.vue";
 export default {
   data() {
     return {
       text: "",
+      header: "Favoritos",
     };
+  },
+  components: {
+    NavBar,
   },
 };
 </script>

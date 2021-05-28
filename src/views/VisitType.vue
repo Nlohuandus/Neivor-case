@@ -1,7 +1,8 @@
 <template>
   <div>
+    <NavBar :header="header" :previousStep="previousStep"/>
     <div>
-      <div><b-progress id="progressBar" :value="[50]" variant="danger" /></div>
+      <div><b-progress id="progressBar" :value="50" variant="danger" /></div>
       <h1>Algunos datos más</h1>
     </div>
     <div>
@@ -32,23 +33,34 @@
         </datalist>
       </div>
       <div>
-        <p>¿Viene en coche?<b-form-checkbox switch/></p>
+        <p>¿Viene en coche?<b-form-checkbox switch /></p>
       </div>
     </div>
 
     <div>
-      <b-button block variant="primary" to="/visitvehicle">Siguiente</b-button>
+      <b-button block variant="primary" v-on:click="nextStep"
+        >Siguiente</b-button
+      >
     </div>
   </div>
 </template>
 
 <script>
+import NavBar from "../components/NavBar.vue";
 export default {
   name: "VisitType",
   data() {
     return {
       isChecked: "0",
+      header:"Registrar visita"
     };
+  },
+  props: {
+    nextStep: Function,
+    previousStep: Function
+  },
+  components: {
+    NavBar,
   },
 };
 </script>

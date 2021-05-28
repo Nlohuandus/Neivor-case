@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NavBar :header="header" :previousStep="previousStep"/>
       <div>
         <h1>!Pablo ya esta listo!</h1>
         <p>Necesitara este codigo para poder ingresar al condominio, recuerda enviarlo</p>
@@ -17,7 +18,19 @@
 </template>
 
 <script>
+import NavBar from "../components/NavBar.vue"
 export default {
+  data(){
+    return{
+      header:"Registrar visita"
+    }
+  },
+  components:{
+    NavBar
+  },
+  props:{
+    previousStep: Function
+  }
 
 }
 </script>

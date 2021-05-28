@@ -4,11 +4,8 @@ import SelectProfile from "../views/SelectProfile.vue";
 import RegisterVisit from "../views/RegisterVisit.vue";
 import Favorites from "../views/Favorites.vue";
 import Profile from "../views/Profile.vue";
-import Successful from "../views/Successful.vue";
-import VisitInfo from "../views/VisitInfo.vue"
-import VisitResume from "../views/VisitResume.vue"
-import VisitType from "../views/VisitType.vue"
-import VisitVehicle from "../views/VisitVehicle.vue"
+import NewVisitOwner from "../components/NewVisitOwner.vue"
+import ScanCode from "../components/ScanCode.vue"
 Vue.use(VueRouter);
 
 const routes = [
@@ -18,8 +15,21 @@ const routes = [
     component: SelectProfile,
   },
   {
-    path: "/register",
-    name: "RegisterVisit",
+    path: "/registerowner",
+    name: "RegisterOwner",
+    props:{
+      button1: "Favoritos",
+      button2: "Nuevo visitante"
+    },
+    component: RegisterVisit,
+  },
+  {
+    path: "/registervigilant",
+    name: "RegisterVigilant",
+    props:{
+      button1: "Con codigo",
+      button2: "Sin codigo"
+    },
     component: RegisterVisit,
   },
   { path: "/favorites", name: "favorites", component: Favorites },
@@ -29,29 +39,14 @@ const routes = [
     component: Profile,
   },
   {
-    path: "/successful",
-    name: "successful",
-    component: Successful,
+    path: "/newVisitOwner",
+    name: "NewVisitOwner",
+    component: NewVisitOwner,
   },
   {
-    path: "/visitinfo",
-    name: "VisitInfo",
-    component: VisitInfo,
-  },
-  {
-    path: "/visitresume",
-    name: "VisitInfo",
-    component: VisitResume,
-  },
-  {
-    path: "/visittype",
-    name: "VisitInfo",
-    component: VisitType,
-  },
-  {
-    path: "/visitvehicle",
-    name: "VisitInfo",
-    component: VisitVehicle,
+    path: "/scancode",
+    name: "scancode",
+    component: ScanCode,
   }
 ];
 

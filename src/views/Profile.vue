@@ -1,5 +1,6 @@
 <template>
   <div id="Profile">
+    <NavBar :header="header" />
     <div id="text">
       <h6>Pablo Villa</h6>
       <p>DNI</p>
@@ -30,8 +31,17 @@
 </template>
 
 <script>
+import NavBar from "../components/NavBar.vue";
 export default {
   name: "Profile",
+  components: {
+    NavBar,
+  },
+  data() {
+    return {
+      header: "Favoritos",
+    };
+  },
 };
 </script>
 
