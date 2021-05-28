@@ -4,6 +4,11 @@ import SelectProfile from "../views/SelectProfile.vue";
 import RegisterVisit from "../views/RegisterVisit.vue";
 import Favorites from "../views/Favorites.vue";
 import Profile from "../views/Profile.vue";
+import Successful from "../views/Successful.vue";
+import VisitInfo from "../views/VisitInfo.vue"
+import VisitResume from "../views/VisitResume.vue"
+import VisitType from "../views/VisitType.vue"
+import VisitVehicle from "../views/VisitVehicle.vue"
 Vue.use(VueRouter);
 
 const routes = [
@@ -15,9 +20,6 @@ const routes = [
   {
     path: "/register",
     name: "RegisterVisit",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: RegisterVisit,
   },
   { path: "/favorites", name: "favorites", component: Favorites },
@@ -26,6 +28,31 @@ const routes = [
     name: "Profile",
     component: Profile,
   },
+  {
+    path: "/successful",
+    name: "successful",
+    component: Successful,
+  },
+  {
+    path: "/visitinfo",
+    name: "VisitInfo",
+    component: VisitInfo,
+  },
+  {
+    path: "/visitresume",
+    name: "VisitInfo",
+    component: VisitResume,
+  },
+  {
+    path: "/visittype",
+    name: "VisitInfo",
+    component: VisitType,
+  },
+  {
+    path: "/visitvehicle",
+    name: "VisitInfo",
+    component: VisitVehicle,
+  }
 ];
 
 const router = new VueRouter({

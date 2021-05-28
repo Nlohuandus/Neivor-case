@@ -8,7 +8,7 @@
     </div>
     <div>
       <b-button block to="/favorites" variant="primary">Favoritos</b-button>
-      <b-button block variant="primary">Nuevo visitante</b-button>
+      <b-button block variant="primary" to="/visitinfo">Nuevo visitante</b-button>
     </div>
   </div>
 </template>
