@@ -2,7 +2,7 @@
   <div>
     <NavBar :header="header" :previousStep="previousStep"/>
     <div>
-      <div><b-progress id="progressBar" :value="10" variant="danger" /></div>
+      <div><b-progress id="progressBar" :value="progress" variant="danger" /></div>
       <h1>Datos de la visita</h1>
     </div>
     <div>
@@ -26,7 +26,8 @@ export default {
   components: { NavBar },
   props: {
     nextStep: Function,
-    previousStep: Function
+    previousStep: Function,
+    progress: Number
   },
   data() {
     return {

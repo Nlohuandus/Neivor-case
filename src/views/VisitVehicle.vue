@@ -3,7 +3,7 @@
     <NavBar :header="header" :previousStep="previousStep"/>
 
     <div>
-      <div><b-progress id="progressBar" :value="70" variant="danger" /></div>
+      <div><b-progress id="progressBar" :value="progress" variant="danger" /></div>
       <h1>¿Que vehiculo usa?</h1>
     </div>
     <div id="iconGroup">
@@ -30,7 +30,8 @@ export default {
   name: "VisitVehicle",
   props: {
     nextStep: Function,
-    previousStep: Function
+    previousStep: Function,
+    progress: Number
   },
   data(){
     return{

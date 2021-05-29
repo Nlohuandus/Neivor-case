@@ -1,31 +1,29 @@
 <template>
-<div>
   <div v-if="index === 0">
-    <VisitData :nextStep="nextStep" :previousStep="previousStep" />
+    <VisitData :nextStep="nextStep" :progress="10" />
   </div>
   <div v-else-if="index === 1">
-    <VisitType :nextStep="nextStep" :previousStep="previousStep" />
+    <VisitVehicle :nextStep="nextStep" :previousStep="previousStep" :progress="60" />
   </div>
   <div v-else-if="index === 2">
-    <VisitVehicle :nextStep="nextStep" :previousStep="previousStep" />
+    <Smile :nextStep="nextStep" :previousStep="previousStep" :progress="70"/>
   </div>
   <div v-else-if="index === 3">
-    <VisitResume :nextStep="nextStep" :previousStep="previousStep" />
+    <VisitResume :nextStep="nextStep" :previousStep="previousStep" :progress="90" />
   </div>
   <div v-else-if="index === 4">
-    <SuccessOwner :previousStep="previousStep" />
-  </div>
+    <Success :nextStep="nextStep" :previousStep="previousStep" />
   </div>
 </template>
 
 <script>
 import VisitData from "../views/VisitData";
-import VisitType from "../views/VisitType";
 import VisitVehicle from "../views/VisitVehicle";
-import VisitResume from "../views/VisitResume";
+import Smile from "../views/Smile.vue"
+import VisitResume from "../views/VisitResume.vue";
+import Success from "../views/Success.vue"
 import VueRouter from "vue-router";
 import Vue from "vue";
-import SuccessOwner from "../views/SuccessOwner.vue";
 Vue.use(VueRouter);
 export default {
   name: "NewVisitOwner",
@@ -33,19 +31,19 @@ export default {
     return {
       index: 0,
       steps: [
-        "ScanCode",
+        "VisitData",
+        "VisitVehicle",
         "Smile",
         "Resume",
-        "success",
       ],
     };
   },
   components: {
     VisitData,
-    VisitType,
     VisitVehicle,
+    Smile,
     VisitResume,
-    SuccessOwner,
+    Success
   },
   methods: {
     nextStep: function () {
@@ -53,9 +51,9 @@ export default {
     },
     previousStep: function () {
       this.index === 0
-        ? this.$router.push("/registerowner")
+        ? this.$router.push("/")
         : this.index === 4
-        ? this.$router.push("/registerowner")
+        ? this.$router.push("/nocode")
         : this.index--;
     },
   },

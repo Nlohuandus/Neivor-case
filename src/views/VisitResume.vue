@@ -1,9 +1,8 @@
 <template>
   <div>
     <NavBar :header="header" :previousStep="previousStep"/>
-
     <div>
-      <div><b-progress id="progressBar" :value="90" variant="danger" /></div>
+      <div><b-progress id="progressBar" :value="progress" variant="danger" /></div>
     </div>
     <div>
       <b-icon icon="pencil-fill" />
@@ -47,7 +46,8 @@ export default {
   name: "VisitResume",
   props: {
     nextStep: Function,
-    previousStep: Function
+    previousStep: Function,
+    progress: Number
   },
   components: {
     NavBar,

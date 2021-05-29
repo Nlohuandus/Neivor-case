@@ -1,31 +1,84 @@
 <template>
   <div class="SelectProfile">
-    <NavBar :header="header"/>
-    <div>
-      <h1>Pantalla solo para elegir perfil, solo para desarrolladores</h1>
-    </div>
-    <div>
-      <b-button to="/registerowner" block variant="primary">Propietario</b-button>
-      <b-button block variant="primary" to="/registervigilant">Vigilante</b-button>
-      <b-button block variant="primary">Self check-in</b-button>
+    <NavBar :header="header" />
+    <div id="container">
+      <div id="title">
+        <h1>
+          Pantalla solo para <br />
+          elegir perfil, solo <br />
+          para desarrolladores
+        </h1>
+      </div>
+      <div id="buttons">
+        <b-button id="button" to="/registerowner" block variant="white">
+          <div><b-icon id="person" icon="person" />Propietario</div><b-icon
+            id="chevron"
+            icon="chevron-right"
+        /></b-button>
+        <b-button id="button" block variant="white" to="/registervigilant">
+          <div><b-icon  id="person" icon="person" />Vigilante</div><b-icon
+            id="chevron"
+            icon="chevron-right"
+        /></b-button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import NavBar from "../components/NavBar.vue"
+import NavBar from "../components/NavBar.vue";
 export default {
   name: "SelectProfile",
-  components:{
-    NavBar
+  components: {
+    NavBar,
   },
-  data(){
-    return{
-      header: "Elegir perfil"
-    }
-  }
+  data() {
+    return {
+      header: "Elegir perfil",
+    };
+  },
 };
-</script>
+</script >
 
-<style>
+<style scoped>
+#container {
+  height: 75vh;
+}
+#buttons {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 40vh;
+}
+#button {
+  margin-left: 1rem;
+  width: 90vw;
+  box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 42%);
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  color: #616469;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  margin-top: 3rem;
+  font-size: 2rem;
+  color: #3f4144;
+  text-align: center;
+  margin-left: 0.2rem;
+  line-height: 0.9;
+  line-break: strict;
+}
+#person {
+  position: relative;
+  margin-right: 1vh;
+  color: black;
+}
+#chevron {
+  position: relative;
+  margin-left: 20vh;
+  color: black;
+}
 </style>

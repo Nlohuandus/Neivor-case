@@ -1,10 +1,10 @@
 <template>
 <div>
   <div v-if="index === 0">
-    <ScanCode :nextStep="nextStep" :previousStep="previousStep" />
+    <ScanCode :nextStep="nextStep" :previousStep="previousStep" :progress="10" />
   </div>
   <div v-else-if="index === 1">
-    <Smile :nextStep="nextStep" :previousStep="previousStep" />
+    <Smile :nextStep="nextStep" :previousStep="previousStep" :progress="60" />
   </div>
   <div v-else-if="index === 2">
     <Resume :nextStep="nextStep" :previousStep="previousStep" />
@@ -12,19 +12,16 @@
   <div v-else-if="index === 3">
     <Success :nextStep="nextStep" :previousStep="previousStep" />
   </div>
-  <div v-else-if="index === 4">
-    <SuccessOwner :previousStep="previousStep" />
-  </div>
   </div>
 </template>
 
 <script>
-import ScanCode from "../views/ScanCode";
-import Smile from "../views/Smile";
-import Resume from "../views/Resume";
-import Success from "../views/Success";
-import VueRouter from "vue-router";
-import Vue from "vue";
+import ScanCode from "../views/ScanCode.vue";
+import Smile from "../views/Smile.vue";
+import Resume from "../views/Resume.vue";
+import Success from "../views/Success.vue";
+import Vue from "vue"
+import VueRouter from "vue-router"
 Vue.use(VueRouter);
 export default {
   name: "NewVisitOwner",
@@ -51,9 +48,9 @@ export default {
     },
     previousStep: function () {
       this.index === 0
-        ? this.$router.push("/registerowner")
+        ? this.$router.push("/registervigilant")
         : this.index === 4
-        ? this.$router.push("/registerowner")
+        ? this.$router.push("/registervigilant")
         : this.index--;
     },
   },

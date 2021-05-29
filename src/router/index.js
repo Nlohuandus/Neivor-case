@@ -5,7 +5,9 @@ import RegisterVisit from "../views/RegisterVisit.vue";
 import Favorites from "../views/Favorites.vue";
 import Profile from "../views/Profile.vue";
 import NewVisitOwner from "../components/NewVisitOwner.vue"
-import ScanCode from "../components/ScanCode.vue"
+import HasCode from "../components/HasCode.vue"
+import NoCode from "../components/NoCode.vue"
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -44,9 +46,14 @@ const routes = [
     component: NewVisitOwner,
   },
   {
-    path: "/scancode",
-    name: "scancode",
-    component: ScanCode,
+    path: "/hascode",
+    name: "HasCode",
+    component: HasCode,
+  },
+  {
+    path: "/nocode",
+    name: "NoCode",
+    component: NoCode,
   }
 ];
 

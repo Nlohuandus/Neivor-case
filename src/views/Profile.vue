@@ -2,9 +2,8 @@
   <div id="Profile">
     <NavBar :header="header" />
     <div id="text">
-      <h6>Pablo Villa</h6>
-      <p>DNI</p>
-      <p>999 999 999</p>
+      <h4>Pablo Villa</h4>
+      <p>DNI <br>999 999 999</p>
     </div>
     <div>
       <label for="date"> Dia de la visita</label>
@@ -46,4 +45,8 @@ export default {
 </script>
 
 <style>
+#text{
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+}
 </style>
