@@ -5,6 +5,7 @@
       class="container-fluid"
       v-if="previousStep === undefined"
     >
+    <!-- if the property previousSteo is not provided use Back function -->
       <b-icon
         id="arrow"
         v-on:click="back"
@@ -33,6 +34,7 @@ export default {
     previousStep: Function,
   },
   methods: {
+    //get back
     back: function (e) {
       e.preventDefault();
       window.history.back();

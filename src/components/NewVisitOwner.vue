@@ -42,13 +42,6 @@ export default {
   data() {
     return {
       index: 0,
-      steps: [
-        "VisitData",
-        "VisitType",
-        "VisitVehicle",
-        "VisitResume",
-        "success",
-      ],
     };
   },
   components: {
@@ -59,6 +52,7 @@ export default {
     SuccessOwner,
   },
   methods: {
+    //move index for conditional rendering
     nextStep: function () {
       this.index++;
     },

@@ -4,6 +4,7 @@
     <div id="inputContainer">
       <b-form-input id="input" placeholder="🔍" v-model="text" />
     </div>
+    <!-- wraped in a link to redirect -->
     <div id="link" v-for="n in 5" :key="n" class="mt-4">
       <router-link to="/profile">
         <b-card
@@ -31,7 +32,7 @@ export default {
   data() {
     return {
       text: "",
-      header: "Favoritos",
+      header: "Favoritos", //set navbar title
     };
   },
   components: {
@@ -56,8 +57,6 @@ export default {
   width: 90vw;
   height: 13vh;
   box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 25%);
-  font-family: "Jost", sans-serif;
-  text-decoration: none;
 }
 .card {
   height: 13vh;

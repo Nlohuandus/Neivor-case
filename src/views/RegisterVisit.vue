@@ -9,8 +9,9 @@
         </h1>
       </div>
       <div id="couple">
-        <img id="image" src="../assets/couple.png" alt="couple img" />
+        <b-img id="image" width="250rem" src="../assets/couple.png" alt="couple img" />
       </div>
+      <!-- conditional rendering based in received props -->
       <div id="buttons" v-if="button1 === 'Favoritos'">
         <b-button
           class="whiteButton"
@@ -117,30 +118,4 @@ h1 {
 #star {
   color: #f4b223;
 }
-@media (min-width :375px) {
-  #image {
-  width: 75vw;
-}
-}
-@media (min-width :425px) {
-  #image {
-  width: 60vw;
-}
-}
-@media (min-width :768px) {
-  #image {
-  width: 30vw;
-}
-}
-@media (min-width :1024px) {
-  #image {
-  width: 20vw;
-}
-}
-@media (min-width :1440px) {
-  #image {
-  width: 20vw;
-}
-}
-
 </style>

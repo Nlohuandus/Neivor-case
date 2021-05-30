@@ -44,6 +44,7 @@ export default {
     Success,
   },
   methods: {
+    //move index for conditional rendering
     nextStep: function () {
       this.index++;
     },

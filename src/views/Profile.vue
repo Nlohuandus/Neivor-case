@@ -34,7 +34,9 @@
       <b-button id="favorite" class="whiteButton" block variant="white"
         >Quitar de favoritos <b-icon id="star" icon="star-fill"
       /></b-button>
-      <b-button class="redButton" id="listo" block to="/success">Listo</b-button>
+      <b-button class="redButton" id="listo" block to="/success"
+        >Listo</b-button
+      >
     </div>
   </div>
 </template>
@@ -48,7 +50,7 @@ export default {
   },
   data() {
     return {
-      header: "Registrar visita",
+      header: "Registrar visita", //set navbar title
     };
   },
 };

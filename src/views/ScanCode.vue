@@ -3,7 +3,8 @@
     <NavBar :header="header" :previousStep="previousStep" />
     <div>
       <div>
-        <b-progress id="progressBar" :value="progress"/>
+        <!-- progress amount receibed by invoker -->
+        <b-progress id="progressBar" :value="progress"/> 
       </div>
       <h2>Scanea el codigo</h2>
     </div>
@@ -25,11 +26,11 @@ export default {
   },
   data() {
     return {
-      header: "Registrar visita",
+      header: "Registrar visita", //set navbar title
     };
   },
   props: {
-    nextStep: Function,
+    nextStep: Function, //next and previous from invoker 
     previousStep: Function,
     progress: Number,
   },

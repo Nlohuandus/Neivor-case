@@ -37,22 +37,13 @@ export default {
     NavBar,
   },
   props: {
-    nextStep: Function,
+    nextStep: Function,  //next and previous steps from invoker
     previousStep: Function,
   },
   data() {
     return {
-      header: "Registrar Visita",
+      header: "Registrar Visita", //set navbar title
     };
-  },
-  methods: {
-    isNoCode: function () {
-      if (this.$route.fullPath === "/nocode") {
-        return true;
-      } else {
-        return false;
-      }
-    },
   },
 };
 </script>

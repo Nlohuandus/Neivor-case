@@ -10,6 +10,7 @@
     <div id="image">
       <b-img width="225rem" src="../assets/someGuy.png" />
     </div>
+    <!-- conditional to reuse code, based in the current url -->
     <div v-if="isNoCode()" id="buttons">
         <b-button block v-on:click="nextStep">Siguiente</b-button>
     </div>

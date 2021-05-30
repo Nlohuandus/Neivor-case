@@ -20,8 +20,8 @@ const routes = [
   {
     path: "/registerowner",
     name: "RegisterOwner",
-    props:{
-      button1: "Favoritos",
+    props:{                            //same componenet diferent route diferent content
+      button1: "Favoritos",                           
       button2: "Nuevo visitante"
     },
     component: RegisterVisit,
@@ -29,8 +29,8 @@ const routes = [
   {
     path: "/registervigilant",
     name: "RegisterVigilant",
-    props:{
-      button1: "Con codigo",
+    props:{                            //same componenet diferent route diferent content
+      button1: "Con codigo",         
       button2: "Sin codigo"
     },
     component: RegisterVisit,
@@ -65,6 +65,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
+  //history mode deletes # and provide history methods
   mode: "history",
   routes,
 });

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- component type router -->
     <div v-if="index === 0">
       <ScanCode
         :nextStep="nextStep"
@@ -41,14 +42,15 @@ export default {
     Success,
   },
   methods: {
+    //move index for contitional rendering
     nextStep: function () {
       this.index++;
     },
     previousStep: function () {
       this.index === 0
-        ? this.$router.push("/registervigilant")
+        ? this.$router.push("/")
         : this.index === 4
-        ? this.$router.push("/registervigilant")
+        ? this.$router.push("/")
         : this.index--;
     },
   },

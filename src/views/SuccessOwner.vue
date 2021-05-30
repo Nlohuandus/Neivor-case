@@ -2,6 +2,7 @@
   <div>
     <NavBar :header="header" :previousStep="previousStep" />
     <div id="text">
+      <!-- name provided by function based on current url for reuse purpose -->
       <h2>!{{ getName() }} ya esta listo!</h2>
       <p>
         Necesitara este codigo para poder <br />

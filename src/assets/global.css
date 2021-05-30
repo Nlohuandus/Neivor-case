@@ -54,7 +54,6 @@ input::-webkit-calendar-picker-indicator {
 html * {
   font-family: "Jost", sans-serif;
 }
-
 a, a:hover {
   text-decoration: none;
   color: #515459;
@@ -62,15 +61,15 @@ a, a:hover {
 #star {
   color: #f4b223;
 }
-
+body {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+/* switch properties */
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
   border: none;
   background-color: #3bbfad;
-}
-body {
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 .custom-switch.b-custom-control-lg .custom-control-label::before,
 .input-group-lg .custom-switch .custom-control-label::before {
