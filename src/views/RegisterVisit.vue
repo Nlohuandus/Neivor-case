@@ -12,20 +12,44 @@
         <img id="image" src="../assets/couple.png" alt="couple img" />
       </div>
       <div id="buttons" v-if="button1 === 'Favoritos'">
-        <b-button class="whiteButton" id="button" block variant="white" to="/favorites"><div><b-icon id="star" icon="star-fill"/>{{
-          button1
-        }}</div><b-icon id="chevron" icon="chevron-right"/></b-button>
-        <b-button class="whiteButton" id="button" block variant="white" to="/newVisitOwner"><div><b-icon id="icon" icon="person-plus"/>{{
-          button2
-        }}</div><b-icon id="chevron" icon="chevron-right"/></b-button>
+        <b-button
+          class="whiteButton"
+          id="button"
+          block
+          variant="white"
+          to="/favorites"
+          ><div><b-icon id="star" icon="star-fill" />{{ button1 }}</div>
+          <b-icon id="chevron" icon="chevron-right"
+        /></b-button>
+        <b-button
+          class="whiteButton"
+          id="button"
+          block
+          variant="white"
+          to="/newVisitOwner"
+          ><div><b-icon id="icon" icon="person-plus" />{{ button2 }}</div>
+          <b-icon id="chevron" icon="chevron-right"
+        /></b-button>
       </div>
       <div id="buttons" v-else>
-        <b-button class="whiteButton" id="button" block variant="white" to="/hascode"><div><b-img id="star" src="../assets/QR.svg"/>{{
-          button1
-        }}</div><b-icon id="chevron" icon="chevron-right"/></b-button>
-        <b-button class="whiteButton" id="button" block variant="white" to="/nocode"><div><b-icon id="icon" icon="person-plus"/>{{
-          button2
-        }}</div><b-icon id="chevron" icon="chevron-right"/></b-button>
+        <b-button
+          class="whiteButton"
+          id="button"
+          block
+          variant="white"
+          to="/hascode"
+          ><div><b-img id="star" src="../assets/QR.svg" />{{ button1 }}</div>
+          <b-icon id="chevron" icon="chevron-right"
+        /></b-button>
+        <b-button
+          class="whiteButton"
+          id="button"
+          block
+          variant="white"
+          to="/nocode"
+          ><div><b-icon id="icon" icon="person-plus" />{{ button2 }}</div>
+          <b-icon id="chevron" icon="chevron-right"
+        /></b-button>
       </div>
     </div>
   </div>
@@ -51,11 +75,13 @@ export default {
 </script>
 
 <style scoped>
+#button:hover{
+  color: #515459;
+}
 h1 {
   margin-top: 2rem;
-  margin-bottom: 1rem ;
+  margin-bottom: 1rem;
   font-size: 2rem;
-  text-align: center;
   line-height: 0.9;
   line-break: strict;
   font-weight: 600;
@@ -80,17 +106,41 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-#image{
-  width: 75vw;
-}
-#icon, #star{
+#icon,
+#star {
   margin-right: 1.5vh;
 }
-#chevron, #icon{
-  color:black
+#chevron,
+#icon {
+  color: black;
 }
-#star{
+#star {
   color: #f4b223;
+}
+@media (min-width :375px) {
+  #image {
+  width: 75vw;
+}
+}
+@media (min-width :425px) {
+  #image {
+  width: 60vw;
+}
+}
+@media (min-width :768px) {
+  #image {
+  width: 30vw;
+}
+}
+@media (min-width :1024px) {
+  #image {
+  width: 20vw;
+}
+}
+@media (min-width :1440px) {
+  #image {
+  width: 20vw;
+}
 }
 
 </style>

@@ -3,7 +3,7 @@
     <NavBar :header="header" :previousStep="previousStep" />
     <div>
       <div>
-        <b-progress :value="progress" variant="danger" />
+        <b-progress :value="progress" />
       </div>
       <h1>¿Que vehiculo usa?</h1>
     </div>

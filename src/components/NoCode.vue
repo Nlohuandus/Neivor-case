@@ -3,10 +3,14 @@
     <VisitData :nextStep="nextStep" :progress="10" />
   </div>
   <div v-else-if="index === 1">
-    <VisitVehicle :nextStep="nextStep" :previousStep="previousStep" :progress="60" />
+    <VisitVehicle
+      :nextStep="nextStep"
+      :previousStep="previousStep"
+      :progress="60"
+    />
   </div>
   <div v-else-if="index === 2">
-    <Smile :nextStep="nextStep" :previousStep="previousStep" :progress="70"/>
+    <Smile :nextStep="nextStep" :previousStep="previousStep" :progress="70" />
   </div>
   <div v-else-if="index === 3">
     <Resume :nextStep="nextStep" :previousStep="previousStep" :progress="90" />
@@ -19,9 +23,9 @@
 <script>
 import VisitData from "../views/VisitData";
 import VisitVehicle from "../views/VisitVehicle";
-import Smile from "../views/Smile.vue"
+import Smile from "../views/Smile.vue";
 import Resume from "../views/Resume.vue";
-import Success from "../views/Success.vue"
+import Success from "../views/Success.vue";
 import VueRouter from "vue-router";
 import Vue from "vue";
 Vue.use(VueRouter);
@@ -30,12 +34,6 @@ export default {
   data() {
     return {
       index: 0,
-      steps: [
-        "VisitData",
-        "VisitVehicle",
-        "Smile",
-        "Resume",
-      ],
     };
   },
   components: {
@@ -43,7 +41,7 @@ export default {
     VisitVehicle,
     Smile,
     Resume,
-    Success
+    Success,
   },
   methods: {
     nextStep: function () {

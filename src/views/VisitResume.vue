@@ -3,7 +3,7 @@
     <NavBar :header="header" :previousStep="previousStep" />
     <div>
       <div>
-        <b-progress id="progressBar" :value="progress" variant="danger" />
+        <b-progress id="progressBar" :value="progress" />
       </div>
     </div>
     <div id="data">
@@ -65,7 +65,6 @@ export default {
 </script>
 
 <style scoped>
-
 #matricula {
   margin-left: -8rem;
 }
@@ -103,7 +102,7 @@ export default {
   height: 2rem;
   border: solid 1px rgb(94, 94, 94);
   text-align: center;
-  font-size: 1.5rem ;
+  font-size: 1.5rem;
   border-radius: 5px 5px 5px 5px;
 }
 #minus {

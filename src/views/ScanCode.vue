@@ -2,7 +2,9 @@
   <div>
     <NavBar :header="header" :previousStep="previousStep" />
     <div>
-      <div><b-progress id="progressBar" :value="progress" variant="danger" /></div>
+      <div>
+        <b-progress id="progressBar" :value="progress"/>
+      </div>
       <h2>Scanea el codigo</h2>
     </div>
     <div id="image">
@@ -24,32 +26,32 @@ export default {
   data() {
     return {
       header: "Registrar visita",
-    }
+    };
   },
-  props:{
+  props: {
     nextStep: Function,
     previousStep: Function,
-    progress: Number
-  }
-}
+    progress: Number,
+  },
+};
 </script>
 
 <style scoped>
-h2{
+h2 {
   text-align: center;
   margin-bottom: 3rem;
   font-weight: 600;
 }
-#image{
+#image {
   display: flex;
   justify-content: center;
-  align-items:center ;
+  align-items: center;
 }
 .btn-secondary {
   background-color: #fc5859;
   border: none;
 }
-#buttons{
+#buttons {
   position: relative;
   top: 23vh;
 }

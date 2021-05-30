@@ -37,6 +37,12 @@ input::-webkit-calendar-picker-indicator {
   justify-content: space-between;
   color: #515459;
 }
+#buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #navBar {
   background: #ff7172;
   font-family: "Jost", sans-serif;
@@ -48,11 +54,10 @@ input::-webkit-calendar-picker-indicator {
 html * {
   font-family: "Jost", sans-serif;
 }
-a {
-  color: #515459;
-}
-a:hover {
+
+a, a:hover {
   text-decoration: none;
+  color: #515459;
 }
 #star {
   color: #f4b223;
@@ -76,7 +81,6 @@ body {
   border-radius: 1.625rem;
   box-shadow: 0.8px 0.8px 0.8px 0px rgb(0 0 0 / 25%);
   border: none;
-
 }
 .custom-switch.b-custom-control-lg .custom-control-label::after,
 .input-group-lg .custom-switch .custom-control-label::after {

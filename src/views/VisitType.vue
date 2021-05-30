@@ -3,7 +3,7 @@
     <NavBar :header="header" :previousStep="previousStep" />
     <div>
       <div>
-        <b-progress id="progressBar" variant="danger" :value="progress" />
+        <b-progress id="progressBar" :value="progress" />
       </div>
       <h2>Algunos datos más</h2>
     </div>
@@ -79,7 +79,7 @@ export default {
   justify-content: space-between;
   margin-bottom: 1rem;
 }
-h2{
+h2 {
   text-align: center;
   font-weight: 600;
   margin-bottom: 1rem;

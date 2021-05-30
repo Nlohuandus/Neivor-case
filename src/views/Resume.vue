@@ -45,15 +45,15 @@ export default {
       header: "Registrar Visita",
     };
   },
-  methods:{
-    isNoCode: function (){
-      if(this.$route.fullPath === "/nocode"){
-        return true
-      }else{
-        return false
+  methods: {
+    isNoCode: function () {
+      if (this.$route.fullPath === "/nocode") {
+        return true;
+      } else {
+        return false;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -1,7 +1,9 @@
 <template>
   <div>
     <NavBar :header="header" :previousStep="previousStep" />
-    <div><b-progress id="progressBar" variant="danger" :value="progress"/></div>
+    <div>
+      <b-progress id="progressBar" :value="progress" />
+    </div>
     <div>
       <h1>Datos de la visita</h1>
     </div>

@@ -30,13 +30,11 @@
         <b-form-checkbox id="acompañante" size="lg" switch />
       </div>
     </div>
-    <div id="favoriteContainer">
+    <div id="buttons">
       <b-button id="favorite" class="whiteButton" block variant="white"
         >Quitar de favoritos <b-icon id="star" icon="star-fill"
       /></b-button>
-    </div>
-    <div id="buttons">
-      <b-button id="listo" block to="/success">Listo</b-button>
+      <b-button class="redButton" id="listo" block to="/success">Listo</b-button>
     </div>
   </div>
 </template>
@@ -71,7 +69,7 @@ export default {
   flex-direction: column;
   margin-bottom: 1rem;
 }
-label{
+label {
   margin-bottom: -0.1rem;
   font-size: 0.8rem;
 }
@@ -100,5 +98,4 @@ label[for="acompañante"] {
 .b-form-btn-label-control.form-control {
   flex-direction: row-reverse;
 }
-
 </style>

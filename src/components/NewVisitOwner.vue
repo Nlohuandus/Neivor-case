@@ -3,13 +3,25 @@
     <VisitData :nextStep="nextStep" :progress="10" />
   </div>
   <div v-else-if="index === 1">
-    <VisitType :nextStep="nextStep" :previousStep="previousStep" :progress="50" />
+    <VisitType
+      :nextStep="nextStep"
+      :previousStep="previousStep"
+      :progress="50"
+    />
   </div>
   <div v-else-if="index === 2">
-    <VisitVehicle :nextStep="nextStep" :previousStep="previousStep" :progress="70" />
+    <VisitVehicle
+      :nextStep="nextStep"
+      :previousStep="previousStep"
+      :progress="70"
+    />
   </div>
   <div v-else-if="index === 3">
-    <VisitResume :nextStep="nextStep" :previousStep="previousStep" :progress="90"/>
+    <VisitResume
+      :nextStep="nextStep"
+      :previousStep="previousStep"
+      :progress="90"
+    />
   </div>
   <div v-else-if="index === 4">
     <SuccessOwner :previousStep="previousStep" />

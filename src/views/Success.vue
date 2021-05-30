@@ -18,6 +18,9 @@ export default {
   components: {
     NavBar,
   },
+  props: {
+    previousStep: Function,
+  },
   data() {
     return {
       header: "Registrar visita",

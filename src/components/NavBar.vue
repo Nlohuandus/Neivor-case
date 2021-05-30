@@ -1,11 +1,25 @@
 <template>
   <nav id="navBar" class="navbar navbar-expand-lg">
-    <div id="container" class="container-fluid" v-if="previousStep === undefined">
-      <b-icon id="arrow" v-on:click="back" class="h1 mb-2" icon="arrow-left-short" />
+    <div
+      id="container"
+      class="container-fluid"
+      v-if="previousStep === undefined"
+    >
+      <b-icon
+        id="arrow"
+        v-on:click="back"
+        class="h1 mb-2"
+        icon="arrow-left-short"
+      />
       <p id="header" class="navbar-brand">{{ header }}</p>
     </div>
     <div id="container" class="container-fluid" v-else>
-      <b-icon id="arrow" v-on:click="previousStep" class="h1 mb-2" icon="arrow-left-short" />
+      <b-icon
+        id="arrow"
+        v-on:click="previousStep"
+        class="h1 mb-2"
+        icon="arrow-left-short"
+      />
       <p id="header" class="navbar-brand">{{ header }}</p>
     </div>
   </nav>
@@ -16,14 +30,14 @@ export default {
   name: "NavBar",
   props: {
     header: String,
-    previousStep: Function
+    previousStep: Function,
   },
-  methods:{
-    back: function (e){
-      e.preventDefault()
-      window.history.back()
-    }
-  }
+  methods: {
+    back: function (e) {
+      e.preventDefault();
+      window.history.back();
+    },
+  },
 };
 </script>
 
@@ -35,17 +49,16 @@ export default {
   align-items: flex-start;
   height: 50px;
 }
-.h1{
+.h1 {
   font-size: 3.5rem;
   margin-left: -1rem;
 }
-.h1:hover{
+.h1:hover {
   cursor: pointer;
 }
-.navbar-brand{
+.navbar-brand {
   font-size: 1.5rem;
   margin-top: 0.2rem;
   color: #f1f1f1;
 }
-
 </style>

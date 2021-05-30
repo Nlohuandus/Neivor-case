@@ -10,15 +10,13 @@
         </h1>
       </div>
       <div id="buttons">
-        <b-button id="button" to="/registerowner" block variant="white">
-          <div><b-icon id="person" icon="person" />Propietario</div><b-icon
-            id="chevron"
-            icon="chevron-right"
+        <b-button id="button" class="whiteButton" to="/registerowner" block variant="white">
+          <div><b-icon id="person" icon="person" />Propietario</div>
+          <b-icon id="chevron" icon="chevron-right"
         /></b-button>
-        <b-button id="button" block variant="white" to="/registervigilant">
-          <div><b-icon  id="person" icon="person" />Vigilante</div><b-icon
-            id="chevron"
-            icon="chevron-right"
+        <b-button id="button" class="whiteButton" block variant="white" to="/registervigilant">
+          <div><b-icon id="person" icon="person" />Vigilante</div>
+          <b-icon id="chevron" icon="chevron-right"
         /></b-button>
       </div>
     </div>
