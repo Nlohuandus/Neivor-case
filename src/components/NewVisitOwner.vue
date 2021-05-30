@@ -21,9 +21,9 @@ import VisitData from "../views/VisitData";
 import VisitType from "../views/VisitType";
 import VisitVehicle from "../views/VisitVehicle";
 import VisitResume from "../views/VisitResume";
+import SuccessOwner from "../views/SuccessOwner.vue";
 import VueRouter from "vue-router";
 import Vue from "vue";
-import SuccessOwner from "../views/SuccessOwner.vue";
 Vue.use(VueRouter);
 export default {
   name: "NewVisitOwner",
@@ -52,9 +52,9 @@ export default {
     },
     previousStep: function () {
       this.index === 0
-        ? this.$router.push("/registerowner")
+        ? this.$router.push("/")
         : this.index === 4
-        ? this.$router.push("/registerowner")
+        ? this.$router.push("/")
         : this.index--;
     },
   },

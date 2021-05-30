@@ -2,7 +2,7 @@
   <div>
     <NavBar :header="header" :previousStep="previousStep" />
     <div id="text">
-      <h2>!Pablo ya esta listo!</h2>
+      <h2>!{{ getName() }} ya esta listo!</h2>
       <p>
         Necesitara este codigo para poder <br />
         ingresar al condominio, recuerda enviarlo
@@ -21,6 +21,9 @@
 
 <script>
 import NavBar from "../components/NavBar.vue";
+import VueRouter from "vue-router";
+import Vue from "vue";
+Vue.use(VueRouter);
 export default {
   data() {
     return {
@@ -33,23 +36,29 @@ export default {
   props: {
     previousStep: Function,
   },
+  methods: {
+    getName: function () {
+      if (this.$route.fullPath === "/success") {
+        return "Pablo";
+      } else {
+        return "Carlos";
+      }
+    },
+  },
 };
 </script>
 
 <style scoped>
 #text,
 #code {
-  margin-left: 1.5rem;
   margin-top: 2rem;
-  margin-right: 1.5rem;
-  font-family: "Jost", sans-serif;
 }
 h2,
 p {
   text-align: center;
 }
 h2 {
-  font-weight: 500;
+  font-weight: 600;
 }
 #code {
   display: flex;

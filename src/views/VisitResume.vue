@@ -26,7 +26,7 @@
     </div>
     <div id="company">
       <label for="acompañantes">Acompañantes</label
-      ><b-checkbox id="acompañantes" switch />
+      ><b-checkbox id="acompañantes" size="lg" switch />
     </div>
     <div id="counter">
       <b-img id="minus" src="../assets/minus.svg" />
@@ -34,7 +34,7 @@
       <b-img id="plus" src="../assets/plus.svg" />
     </div>
     <div id="favorite">
-      <b-button id="add" block variant="white"
+      <b-button id="add" class="whitheButton" block variant="white"
         >Recordar en favoritos <b-icon id="star" icon="star"
       /></b-button>
     </div>
@@ -65,16 +65,7 @@ export default {
 </script>
 
 <style scoped>
-#data,
-#vehiculoSwitch,
-#company,
-#carContainer,
-#counter,
-#button,
-#favorite {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
+
 #matricula {
   margin-left: -8rem;
 }
@@ -88,6 +79,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 2rem;
 }
 #vehiculoSwitch {
   display: flex;
@@ -101,16 +93,18 @@ export default {
   margin-bottom: 1rem;
 }
 #carmini {
+  padding: 0.5rem;
   width: 3.5rem;
   background: #3bbfad;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 7px 7px 7px 7px;
 }
 #number {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   border: solid 1px rgb(94, 94, 94);
   text-align: center;
-  border-radius: 10px 10px 10px 10px;
+  font-size: 1.5rem ;
+  border-radius: 5px 5px 5px 5px;
 }
 #minus {
   margin-right: 1rem;
@@ -118,20 +112,17 @@ export default {
 #plus {
   margin-left: 1rem;
 }
-#star {
-  color: yellow;
-}
 #minus,
 #plus {
-  width: 2.5rem;
-  height: 2.5rem;
+  padding: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 42%);
   border-radius: 3px 3px 3px 3px;
 }
 #add {
   margin-bottom: 1rem;
   box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 42%);
-  font-family: "Jost", sans-serif;
   font-weight: 600;
   color: #616469;
   justify-content: space-between;
@@ -146,10 +137,6 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 1rem;
-}
-.progress {
-  overflow: visible;
   margin-bottom: 1rem;
 }
 </style>

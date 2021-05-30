@@ -41,10 +41,7 @@ export default {
 </script>
 
 <style scoped>
-a {
-  color: black;
-  width: inherit;
-}
+
 #inputContainer{
   margin-top: 1.5rem;
   display: flex;

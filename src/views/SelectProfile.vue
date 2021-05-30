@@ -46,7 +46,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  top: 50vh;
+  top: 45vh;
 }
 #button {
   box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 42%);

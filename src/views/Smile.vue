@@ -3,26 +3,34 @@
     <NavBar :header="header" :previousStep="previousStep" />
     <div>
       <div>
-        <b-progress id="progressBar" :value="progress" variant="danger" />
+        <b-progress id="progressBar" :value="progress"/>
       </div>
-      <h2>Ultimo paso, sonrie</h2>
+      <h2>Último paso, sonríe</h2>
     </div>
     <div id="image">
       <b-img width="225rem" src="../assets/someGuy.png" />
     </div>
-    <div id="buttons">
+    <div v-if="isNoCode()" id="buttons">
+      <div id="siguienteIf">
+      <b-button block v-on:click="nextStep">Siguiente</b-button>
+      </div>
+    </div>
+    <div v-else id="buttons">
       <div id="siguiente">
       <b-button block v-on:click="nextStep">Siguiente</b-button>
       </div>
       <div>
-      <b-button id="omitir" block variant="white">Omitir</b-button>
+      <b-button id="omitir" class="whiteButton" block variant="white">Omitir</b-button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Vue from "vue"
+import VueRouter from "vue-router"
 import NavBar from "../components/NavBar.vue";
+Vue.use(VueRouter)
 export default {
   name: "Smile",
   components: {
@@ -38,19 +46,23 @@ export default {
     nextStep: Function,
     progress: Number,
   },
+  methods:{
+    isNoCode: function (){
+      if(this.$route.fullPath === "/nocode"){
+        return true
+      }else{
+        return false
+      }
+    }
+  }
 };
 </script>
 
 <style scoped>
-h2,
-#buttons,
-#image {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
 h2 {
   text-align: center;
   margin-bottom: 2rem;
+  font-weight: 600;
 }
 #image {
   display: flex;
@@ -62,15 +74,23 @@ h2 {
 .btn-secondary {
   background-color: #fc5859;
   border: none;
-}
-.progress {
-  overflow: visible;
-  margin-bottom: 1rem;
+  font-weight: 600;
 }
 #omitir {
-  box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 42%);
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  font-weight: 600 ;
 }
 #siguiente{
   margin-bottom: 1rem;
+}
+#siguienteIf{
+  position: relative;
+  top: 3.8rem;
+}
+#buttons{
+  position: relative;
+  top: 1rem;
 }
 </style>

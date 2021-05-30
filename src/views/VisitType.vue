@@ -5,7 +5,7 @@
       <div>
         <b-progress id="progressBar" variant="danger" :value="progress" />
       </div>
-      <h1>Algunos datos más</h1>
+      <h2>Algunos datos más</h2>
     </div>
     <div>
       <div id="daySwitch">
@@ -31,7 +31,7 @@
       </div>
       <div id="today" v-else>
         <label for="day">Dia de visita</label>
-        <b-datepicker :style="'width:90vw'" placeholder="Hoy" id="day" />
+        <b-datepicker :style="'width:91.5vw'" placeholder="Hoy" id="day" />
       </div>
       <div id="typeContainer">
         <label for="visitType"> Tipo de visita</label>
@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <div id="button">
+    <div id="buttons">
       <b-button block v-on:click="nextStep">Siguiente</b-button>
     </div>
   </div>
@@ -79,13 +79,10 @@ export default {
   justify-content: space-between;
   margin-bottom: 1rem;
 }
-#daySwitch,
-#true,
-#today,
-#typeContainer,
-#switch, #button {
-  margin-left: 1rem;
-  margin-right: 1rem;
+h2{
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 #true {
   display: flex;
@@ -94,9 +91,6 @@ export default {
 }
 .b-form-btn-label-control.form-control {
   flex-direction: row-reverse;
-}
-.progress {
-  overflow: visible;
 }
 label[for="start"],
 label[for="day"],
@@ -112,7 +106,7 @@ label[for="visitType"] {
 }
 .btn-secondary {
   position: relative;
-  top: 16vh;
+  top: 20.5vh;
   background-color: #fc5859;
   border: none;
 }

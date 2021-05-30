@@ -3,7 +3,7 @@
     <NavBar :header="header" :previousStep="previousStep" />
     <div>
       <div>
-        <b-progress id="progressBar" :value="progress" variant="danger" />
+        <b-progress :value="progress" variant="danger" />
       </div>
       <h1>¿Que vehiculo usa?</h1>
     </div>
@@ -17,7 +17,7 @@
       <b-input placeholder="999 999 999" id="plate" />
     </div>
 
-    <div id="button">
+    <div id="buttons">
       <b-button block v-on:click="nextStep">Siguiente</b-button>
     </div>
   </div>
@@ -44,13 +44,6 @@ export default {
 </script>
 
 <style scoped>
-#iconGroup,
-h1,
-#input,
-#button {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
 #iconGroup {
   display: flex;
   flex-direction: row;
@@ -58,7 +51,8 @@ h1,
   margin-bottom: 1rem;
 }
 #car {
-  background: #3bbfad;
+  padding: 1rem;
+  background: #34ac9c;
   border-radius: 8px 8px 8px 8px;
 }
 #moto,
@@ -68,8 +62,10 @@ h1,
 }
 #bike,
 #moto {
-  border: solid 1px;
+  padding: 1rem;
+  border: solid 1.5px;
   border-radius: 8px 8px 8px 8px;
+  border-color: #515459;
 }
 h1 {
   font-size: 2rem;
@@ -82,7 +78,7 @@ label[for="plate"] {
 }
 .btn-secondary {
   position: relative;
-  top: 25vh;
+  top: 28.8vh;
   background-color: #fc5859;
   border: none;
 }

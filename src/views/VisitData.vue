@@ -11,8 +11,8 @@
       <label for="dni"> DNI</label>
       <b-input placeholder="999 999 999" id="dni" />
     </div>
-    <div id="buttonContainer">
-      <b-button id="button" block v-on:click="nextStep">Siguiente</b-button>
+    <div id="buttons">
+      <b-button block v-on:click="nextStep">Siguiente</b-button>
     </div>
   </div>
 </template>
@@ -36,13 +36,6 @@ export default {
 </script>
 
 <style scoped>
-#progressBar {
-  margin-bottom: 1rem;
-}
-h1,
-label {
-  font-family: "Jost", sans-serif;
-}
 #name,
 #dni {
   margin-bottom: 1rem;
@@ -67,26 +60,8 @@ h1 {
   align-items: center;
   margin-bottom: 2rem;
 }
-#buttonContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  
-}
-#button {
-  height: 2.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+#buttons {
   position: relative;
-  top: 28vh;
-}
-.btn-secondary {
-  background-color: #fc5859;
-  border: none;
-}
-.progress {
-  overflow: visible;
-  margin-bottom: 1rem;
+  top: 32vh;
 }
 </style>

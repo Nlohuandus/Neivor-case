@@ -10,12 +10,32 @@
   overflow: visible;
   margin-bottom: 1rem;
 }
+.navbar,
+.progress-bar,
+.progress {
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
 h1 {
   text-align: center;
   font-family: "Jost", sans-serif;
 }
+h1,
+h2,
+h3,
+h4,
+p,
+label {
+  color: #515459;
+}
 input::-webkit-calendar-picker-indicator {
   opacity: 100;
+}
+.whiteButton {
+  box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 25%);
+  display: flex;
+  justify-content: space-between;
+  color: #515459;
 }
 #navBar {
   background: #ff7172;
@@ -25,22 +45,61 @@ input::-webkit-calendar-picker-indicator {
   display: flex;
   box-shadow: 0px 2px 12px 1px rgba(0, 0, 0, 0.479);
 }
-#buttons {
+html * {
+  font-family: "Jost", sans-serif;
+}
+a {
+  color: #515459;
+}
+a:hover {
+  text-decoration: none;
+}
+#star {
+  color: #f4b223;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border: none;
+  background-color: #3bbfad;
+}
+body {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-html *{
-    font-family: "Jost", sans-serif;
+.custom-switch.b-custom-control-lg .custom-control-label::before,
+.input-group-lg .custom-switch .custom-control-label::before {
+  top: 0.25rem;
+  height: 1.5rem;
+  left: -4.2rem;
+  width: 3.6rem;
+  border-radius: 1.625rem;
+  box-shadow: 0.8px 0.8px 0.8px 0px rgb(0 0 0 / 25%);
+  border: none;
+
 }
-a:hover{
-    text-decoration: none;
+.custom-switch.b-custom-control-lg .custom-control-label::after,
+.input-group-lg .custom-switch .custom-control-label::after {
+  top: calc(0.3125rem + -1px);
+  left: calc(-2.8125rem + -23px);
+  width: calc(1.25rem - -4px);
+  height: calc(1.25rem - -4px);
+  border-radius: 15.625rem;
+  background-size: 50% 50%;
+  background-color: #f1f1f1;
+  border: solid 1px;
+  box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 25%);
 }
-#textContainer,
-#dateContainer,
-#selectContainer,
-#switchContainer,
-#favoriteContainer,
-#button {
-  margin-left: 0.5rem;
-  margin-right: 1rem;
+.custom-control-label::before {
+  background-color: #707070;
+}
+.custom-switch.b-custom-control-lg
+  .custom-control-input:checked
+  ~ .custom-control-label::after,
+.input-group-lg
+  .custom-switch
+  .custom-control-input:checked
+  ~ .custom-control-label::after {
+  transform: translateX(2.5rem);
+  border: none;
 }

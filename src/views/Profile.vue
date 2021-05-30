@@ -3,7 +3,7 @@
     <NavBar :header="header" />
     <div id="textContainer">
       <h4 id="name">Pablo Villa</h4>
-      <p id="dni">DNI<br/>999 999 999</p>
+      <p id="dni">DNI<br />999 999 999</p>
     </div>
     <div id="dateContainer">
       <label id="dateLabel" for="date"> Dia de la visita</label
@@ -20,7 +20,7 @@
         <option>Social</option>
       </datalist>
     </div>
-    <div id="switchContainer">
+    <div id="switchContainer" class="switch">
       <div id="vehiculoContainer">
         <label for="vehiculo">Vehiculo</label>
         <b-form-checkbox id="vehiculo" switch size="lg" />
@@ -31,14 +31,12 @@
       </div>
     </div>
     <div id="favoriteContainer">
-      <b-button id="favorite" block variant="white"
-        >Quitar de favoritos <b-icon variant="warning" icon="star-fill"
+      <b-button id="favorite" class="whiteButton" block variant="white"
+        >Quitar de favoritos <b-icon id="star" icon="star-fill"
       /></b-button>
     </div>
-    <div id="button">
-      <b-button id="listo" block variant="danger" to="/success"
-        >Listo</b-button
-      >
+    <div id="buttons">
+      <b-button id="listo" block to="/success">Listo</b-button>
     </div>
   </div>
 </template>
@@ -73,10 +71,9 @@ export default {
   flex-direction: column;
   margin-bottom: 1rem;
 }
-label {
+label{
   margin-bottom: -0.1rem;
   font-size: 0.8rem;
-  font-family: "Jost", sans-serif;
 }
 #switchcontainer {
   display: flex;
@@ -98,13 +95,10 @@ label[for="acompañante"] {
 }
 #favorite {
   margin-bottom: 1rem;
-  box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 25%);
-  font-family: "Jost", sans-serif;
   font-weight: 600;
-  display: flex;
-  justify-content: space-between;
 }
 .b-form-btn-label-control.form-control {
   flex-direction: row-reverse;
 }
+
 </style>

@@ -45,5 +45,7 @@ export default {
 .navbar-brand{
   font-size: 1.5rem;
   margin-top: 0.2rem;
+  color: #f1f1f1;
 }
+
 </style>

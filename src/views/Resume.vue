@@ -10,19 +10,20 @@
         <b-img id="img" width="80rem" src="../assets/someGuy.png" />
       </div>
     </div>
-    <h4 id="vtitle">Vehiculo</h4>
+    <h4 id="vtitle">Vehículo</h4>
     <div id="vehiculo">
       <div>
         <b-img id="carmini" src="../assets/car.svg" />
       </div>
       <div>
-        <p>Matricula <br />999 999 999</p>
+        <p>Matrícula <br />999 999 999</p>
       </div>
     </div>
     <div id="acompañantes">
-      <label for="switch">Acompañantes</label><b-checkbox id="switch" size="lg" switch />
+      <label for="switch">Acompañantes</label
+      ><b-checkbox id="switch" size="lg" switch />
     </div>
-    <div id="button">
+    <div id="buttons">
       <b-button block v-on:click="nextStep">Listo</b-button>
     </div>
   </div>
@@ -44,22 +45,27 @@ export default {
       header: "Registrar Visita",
     };
   },
+  methods:{
+    isNoCode: function (){
+      if(this.$route.fullPath === "/nocode"){
+        return true
+      }else{
+        return false
+      }
+    }
+  }
 };
 </script>
 
 <style scoped>
 #carmini {
+  padding: 0.5rem;
   width: 3.5rem;
-  background: #3bbfad;
+  background: #43bdad;
   border-radius: 8px 8px 8px 8px;
   margin-right: 0.5rem;
 }
-#data,
-#vehiculo, #vtitle, #acompañantes, #button {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-#vtitle{
+#vtitle {
   margin-bottom: 1rem;
 }
 #data {
@@ -79,7 +85,7 @@ export default {
   align-items: center;
   margin-bottom: 1rem;
 }
-#acompañantes{
+#acompañantes {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,9 +94,10 @@ export default {
 .btn-secondary {
   background-color: #fc5859;
   border: none;
+  font-weight: 600;
 }
-#button{
-    position: relative;
-    top: 6rem;
+#buttons {
+  position: relative;
+  top: 6rem;
 }
 </style>
