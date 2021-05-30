@@ -5,9 +5,8 @@
       <b-form-input id="input" placeholder='🔍' v-model="text"/>
     </div>
     <div id="link" v-for="n in 5" :key="n" class="mt-4">
-      <router-link to="/profile">
+      <router-link to="/profile">     
         <b-card
-        id="card"
           img-src="../assets/favoritePerson.jpg"
           img-alt="Profile pic"
           img-left
@@ -15,13 +14,11 @@
           img-height="70rem"
           class="mb-3"
         >
-        <div>
+          <div id="textContainer">
           <h4 id="name">Pablo Villa</h4>
-          <b-card-text id="dni">
-            DNI 999 999 999
-          </b-card-text>
-        </div>
-            <b-icon id="arrow" icon="chevron-right" />
+           <p id="dni"> DNI 999 999 999</p>
+          </div>
+            <b-icon scale="3" id="chevron" icon="chevron-right" />
         </b-card>
       </router-link>
     </div>
@@ -46,6 +43,7 @@ export default {
 <style scoped>
 a {
   color: black;
+  width: inherit;
 }
 #inputContainer{
   margin-top: 1.5rem;
@@ -54,7 +52,8 @@ a {
   align-items: center;
 }
 #input{
-  width: 65vh;
+  width: 62vh;
+  border:solid rgb(177, 177, 177) 1px;
 }
 #link {
   margin-left: 1rem;
@@ -62,24 +61,27 @@ a {
   height: 13vh;
   box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 25%);
   font-family: "Jost", sans-serif;
-  font-weight: 600;
-  color: #616469;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
+  text-decoration: none;
 }
 .card{
   height: 13vh;
-  display: flex;
   border: none;
-  align-items:center ;
 }
 .card-body{
   display: flex;
   flex-direction: row;
   align-items: center ;
+  justify-content: space-between;
 }
 .mt-4{
   border-radius: 5px 5px 5px;
 }
+#name{
+  font-weight: 500;
+}
+#name, #dni{
+  color:#515459
+}
+
+
 </style>

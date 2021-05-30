@@ -1,0 +1,46 @@
+.progress-bar,
+.btn-secondary {
+  background-color: #fc5859;
+  border: none;
+}
+.btn-secondary {
+  height: 2.5rem;
+}
+.progress {
+  overflow: visible;
+  margin-bottom: 1rem;
+}
+h1 {
+  text-align: center;
+  font-family: "Jost", sans-serif;
+}
+input::-webkit-calendar-picker-indicator {
+  opacity: 100;
+}
+#navBar {
+  background: #ff7172;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  display: flex;
+  box-shadow: 0px 2px 12px 1px rgba(0, 0, 0, 0.479);
+}
+#buttons {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+html *{
+    font-family: "Jost", sans-serif;
+}
+a:hover{
+    text-decoration: none;
+}
+#textContainer,
+#dateContainer,
+#selectContainer,
+#switchContainer,
+#favoriteContainer,
+#button {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+}

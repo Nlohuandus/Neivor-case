@@ -1,46 +1,53 @@
 <template>
   <div>
-    <NavBar :header="header" :previousStep="previousStep"/>
+    <NavBar :header="header" :previousStep="previousStep" />
     <div>
-      <div><b-progress id="progressBar" :value="progress" variant="danger" /></div>
+      <div>
+        <b-progress id="progressBar" variant="danger" :value="progress" />
+      </div>
       <h1>Algunos datos más</h1>
     </div>
     <div>
-      <p>
-        Visita de varios dias
+      <div id="daySwitch">
+        <label for="visit"> Visita de varios dias</label>
         <b-form-checkbox
+          id="visit"
           v-model="isChecked"
           value="1"
           unchecked-value="0"
           switch
+          size="lg"
         ></b-form-checkbox>
-      </p>
-      <div v-if="isChecked === '1'">
-        <label for="start">Dia de inicio</label>
-        <b-datepicker id="start" />
-        <label for="end">Dia de de fin</label>
-        <b-datepicker id="end" />
       </div>
-      <div v-else>
+      <div id="true" v-if="isChecked === '1'">
+        <div>
+          <label for="start">Dia de inicio</label>
+          <b-datepicker :style="'width:45vw'" placeholder="Hoy" id="start" />
+        </div>
+        <div>
+          <label for="end">Dia de de fin</label>
+          <b-datepicker placeholder="Hoy" :style="'width:45vw'" id="end" />
+        </div>
+      </div>
+      <div id="today" v-else>
         <label for="day">Dia de visita</label>
-        <b-datepicker id="day" />
+        <b-datepicker :style="'width:90vw'" placeholder="Hoy" id="day" />
       </div>
-      <div>
+      <div id="typeContainer">
         <label for="visitType"> Tipo de visita</label>
-        <b-form-input list="visitType"></b-form-input>
+        <b-form-input placeholder="Social" list="visitType"></b-form-input>
         <datalist id="visitType">
           <option>Social</option>
         </datalist>
       </div>
-      <div>
-        <p>¿Viene en coche?<b-form-checkbox switch /></p>
+      <div id="switch">
+        <label for="car">¿Viene en coche?</label
+        ><b-form-checkbox size="lg" id="car" switch />
       </div>
     </div>
 
-    <div>
-      <b-button block variant="primary" v-on:click="nextStep"
-        >Siguiente</b-button
-      >
+    <div id="button">
+      <b-button block v-on:click="nextStep">Siguiente</b-button>
     </div>
   </div>
 </template>
@@ -52,13 +59,13 @@ export default {
   data() {
     return {
       isChecked: "0",
-      header:"Registrar visita"
+      header: "Registrar visita",
     };
   },
   props: {
     nextStep: Function,
     previousStep: Function,
-    progress:Number
+    progress: Number,
   },
   components: {
     NavBar,
@@ -66,8 +73,47 @@ export default {
 };
 </script>
 
-<style>
-#progressBar {
+<style scoped>
+#daySwitch {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+#daySwitch,
+#true,
+#today,
+#typeContainer,
+#switch, #button {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+#true {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.b-form-btn-label-control.form-control {
+  flex-direction: row-reverse;
+}
+.progress {
   overflow: visible;
+}
+label[for="start"],
+label[for="day"],
+label[for="end"],
+label[for="visitType"] {
+  font-size: 0.9rem;
+  margin-bottom: -0.9rem;
+}
+#switch {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-secondary {
+  position: relative;
+  top: 16vh;
+  background-color: #fc5859;
+  border: none;
 }
 </style>

@@ -9,6 +9,8 @@ Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
 
+import "./assets/global.css"
+
 new Vue({
   router,
   render: (h) => h(App)

@@ -20,10 +20,12 @@
         }}</div><b-icon id="chevron" icon="chevron-right"/></b-button>
       </div>
       <div id="buttons" v-else>
-        <b-button id="button" block variant="white" to="/hascode">{{
+        <b-button id="button" block variant="white" to="/hascode"><div><b-img id="star" src="../assets/QR.svg"/>{{
           button1
-        }}</b-button>
-        <b-button id="button" block variant="white" to="/nocode">{{ button2 }}</b-button>
+        }}</div><b-icon id="chevron" icon="chevron-right"/></b-button>
+        <b-button id="button" block variant="white" to="/nocode"><div><b-icon id="icon" icon="person-plus"/>{{
+          button2
+        }}</div><b-icon id="chevron" icon="chevron-right"/></b-button>
       </div>
     </div>
   </div>
@@ -49,16 +51,16 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
 h1 {
   margin-top: 2rem;
   margin-bottom: 1rem ;
   font-size: 2rem;
-  color: #3f4144;
+  color: #4b4f54;
   text-align: center;
   margin-left: 0.2rem;
   line-height: 0.9;
   line-break: strict;
+  font-weight: 600;
 }
 #couple {
   display: flex;
@@ -82,7 +84,6 @@ h1 {
   margin-left: 1rem;
   width: 90vw;
   box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 42%);
-  font-family: "Jost", sans-serif;
   font-weight: 600;
   color: #616469;
   text-align: left;
@@ -101,4 +102,5 @@ h1 {
 #star{
   color: #f4b223;
 }
+
 </style>

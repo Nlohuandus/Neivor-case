@@ -1,9 +1,10 @@
 <template>
   <div>
-    <NavBar :header="header" :previousStep="previousStep"/>
-
+    <NavBar :header="header" :previousStep="previousStep" />
     <div>
-      <div><b-progress id="progressBar" :value="progress" variant="danger" /></div>
+      <div>
+        <b-progress id="progressBar" :value="progress" variant="danger" />
+      </div>
       <h1>¿Que vehiculo usa?</h1>
     </div>
     <div id="iconGroup">
@@ -11,15 +12,13 @@
       <b-img id="bike" src="../assets/bike.svg" />
       <b-img id="moto" src="../assets/moto.svg" />
     </div>
-    <div>
+    <div id="input">
       <label for="plate">Matricula</label>
-      <b-input id="plate" />
+      <b-input placeholder="999 999 999" id="plate" />
     </div>
 
-    <div>
-      <b-button block variant="primary" v-on:click="nextStep"
-        >Siguiente</b-button
-      >
+    <div id="button">
+      <b-button block v-on:click="nextStep">Siguiente</b-button>
     </div>
   </div>
 </template>
@@ -31,12 +30,12 @@ export default {
   props: {
     nextStep: Function,
     previousStep: Function,
-    progress: Number
+    progress: Number,
   },
-  data(){
-    return{
-      header: "Registrar visita"
-    }
+  data() {
+    return {
+      header: "Registrar visita",
+    };
   },
   components: {
     NavBar,
@@ -45,25 +44,46 @@ export default {
 </script>
 
 <style scoped>
+#iconGroup,
+h1,
+#input,
+#button {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 #iconGroup {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-bottom: 1rem;
 }
 #car {
-  width: 7rem;
   background: #3bbfad;
   border-radius: 8px 8px 8px 8px;
 }
-#bike {
-  width: 7rem;
-}
-#moto {
-  width: 7rem;
+#moto,
+#bike,
+#car {
+  width: 6rem;
 }
 #bike,
 #moto {
   border: solid 1px;
   border-radius: 8px 8px 8px 8px;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+label[for="plate"] {
+  font-size: 0.9rem;
+  margin-bottom: -0.1rem;
+}
+.btn-secondary {
+  position: relative;
+  top: 25vh;
+  background-color: #fc5859;
+  border: none;
 }
 </style>

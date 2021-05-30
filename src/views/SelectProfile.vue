@@ -41,19 +41,14 @@ export default {
 </script >
 
 <style scoped>
-#container {
-  height: 75vh;
-}
 #buttons {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  top: 40vh;
+  top: 50vh;
 }
 #button {
-  margin-left: 1rem;
-  width: 90vw;
   box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 42%);
   font-family: "Jost", sans-serif;
   font-weight: 600;
@@ -63,9 +58,10 @@ export default {
   justify-content: space-between;
 }
 h1 {
+  font-weight: 600;
   margin-top: 3rem;
   font-size: 2rem;
-  color: #3f4144;
+  color: #4b4f54;
   text-align: center;
   margin-left: 0.2rem;
   line-height: 0.9;

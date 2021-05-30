@@ -3,13 +3,13 @@
     <NavBar :header="header" :previousStep="previousStep" />
     <div>
       <div><b-progress id="progressBar" :value="progress" variant="danger" /></div>
-      <h1>Escanea el codigo</h1>
+      <h2>Escanea el codigo</h2>
     </div>
-    <div>
-      <b-img id="image" src="../assets/QRPhone.jpg" />
+    <div id="image">
+      <b-img width="340rem" src="../assets/QRPhone.jpg" />
     </div>
-    <div>
-      <b-button block variant="primary" v-on:click="nextStep">Scan</b-button>
+    <div id="button">
+      <b-button block v-on:click="nextStep">Scan</b-button>
     </div>
   </div>
 </template>
@@ -35,7 +35,29 @@ export default {
 </script>
 
 <style scoped>
-#image {
-  width: 20rem;
+h2, #image, #button{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+h2{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+#image{
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+}
+.btn-secondary {
+  background-color: #fc5859;
+  border: none;
+}
+.progress {
+  overflow: visible;
+  margin-bottom: 1rem;
+}
+#button{
+  position: relative;
+  top: 23vh;
 }
 </style>

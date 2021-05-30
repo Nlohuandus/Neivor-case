@@ -7,6 +7,7 @@ import Profile from "../views/Profile.vue";
 import NewVisitOwner from "../components/NewVisitOwner.vue"
 import HasCode from "../components/HasCode.vue"
 import NoCode from "../components/NoCode.vue"
+import SuccessOwner from "../views/SuccessOwner.vue"
 
 Vue.use(VueRouter);
 
@@ -54,7 +55,13 @@ const routes = [
     path: "/nocode",
     name: "NoCode",
     component: NoCode,
-  }
+  },
+  {
+    path: "/success",
+    name: "Success",
+    component: SuccessOwner,
+  },
+  
 ];
 
 const router = new VueRouter({
