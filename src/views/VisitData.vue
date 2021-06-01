@@ -63,9 +63,11 @@ h1 {
 }
 #buttons {
   position: relative;
-  top: 32vh;
+  top: 31vh;
+  
 }
 #siguiente{
 font-size: 1.3rem;
+
 }
 </style>

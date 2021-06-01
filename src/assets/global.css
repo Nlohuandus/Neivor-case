@@ -8,6 +8,10 @@
 .btn-secondary {
   height: 2.5rem;
 }
+.btn-secondary,
+.whiteButton{
+  max-width: 350px;
+}
 .progress {
   overflow: visible;
   margin-bottom: 1rem;
@@ -110,3 +114,4 @@ body {
   transform: translateX(1.89rem);
   border: none;
 }
+

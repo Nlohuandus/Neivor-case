@@ -53,7 +53,7 @@ export default {
   font-weight: 600;
 }
 #carmini {
-  padding: 0.5rem;
+  padding: 0.3rem;
   width: 3.5rem;
   background: #43bdad;
   border-radius: 8px 8px 8px 8px;
@@ -93,6 +93,9 @@ export default {
 }
 #buttons {
   position: relative;
-  top: 7rem;
+  top: 6.2rem;
+}
+label[for=switch]{
+  font-size: 1.5rem;
 }
 </style>

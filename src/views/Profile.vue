@@ -110,7 +110,6 @@ label[for="acompañante"] {
   font-size: 1.3rem;
 }
 #favorite {
-  margin-bottom: 1rem;
   font-weight: 600;
   font-size: 1.3rem;
   color: #616469;

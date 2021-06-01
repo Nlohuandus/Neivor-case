@@ -19,7 +19,8 @@
           size="lg"
         ></b-form-checkbox>
       </div>
-      <div id="true" v-if="isChecked === '1'">
+      <transition name="slide-fade">
+      <div key=1 id="true" v-if="isChecked === '1'">
         <div>
           <label for="start">Dia de inicio</label>
           <b-datepicker :style="'width:45vw'" placeholder="Hoy" id="start" />
@@ -29,10 +30,11 @@
           <b-datepicker placeholder="Hoy" :style="'width:45vw'" id="end" />
         </div>
       </div>
-      <div id="today" v-else>
+      <div key=2 id="today" v-else>
         <label for="day">Dia de visita</label>
         <b-datepicker :style="'width:91.5vw'" placeholder="Hoy" id="day" />
       </div>
+      </transition>
       <div id="typeContainer">
         <label for="visitType"> Tipo de visita</label>
         <b-form-input placeholder="Social" list="visitType"></b-form-input>
@@ -106,11 +108,30 @@ label[for="visitType"] {
 }
 .btn-secondary {
   position: relative;
-  top: 20.5vh;
+  top: 19.4vh;
   background-color: #fc5859;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #button{
   font-size: 1.3rem;
+}
+.slide-fade-enter-active {
+  transition: all .3s ease;
+  position: relative;
+  left: 0;
+  top: 0;
+  
+}
+.slide-fade-leave-active {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>

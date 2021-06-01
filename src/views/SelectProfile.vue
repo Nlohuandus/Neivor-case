@@ -44,12 +44,10 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  top: 40vh;
+  top: 39.9vh;
 }
 #button {
-  box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 42%);
   font-weight: 600;
-  color: #616469;
   text-align: left;
   display: flex;
   justify-content: space-between;
@@ -61,8 +59,7 @@ h1 {
   font-size: 2rem;
   color: #4b4f54;
   text-align: center;
-  margin-left: 0.2rem;
-  line-height: 0.9;
+  line-height: 0.99;
   line-break: strict;
 }
 #person {

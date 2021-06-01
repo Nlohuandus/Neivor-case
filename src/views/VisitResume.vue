@@ -11,7 +11,7 @@
         <h4>Carlos Villa</h4>
         <p>DNI<br />999 999 999</p>
       </div>
-      <b-icon icon="pencil-fill" v-on:click="backToZero()"/>
+      <b-icon icon="pencil-fill" v-on:click="backToZero()" />
     </div>
     <div id="vehiculoSwitch">
       <label for="vehiculo">Vehiculo</label>
@@ -30,12 +30,18 @@
     </div>
     <div id="counter">
       <b-img v-on:click="remove()" id="minus" src="../assets/minus.svg" />
-      <h2 id="number">{{count}}</h2>
+      <h2 id="number">{{ count }}</h2>
       <b-img v-on:click="add()" id="plus" src="../assets/plus.svg" />
     </div>
     <div id="favorite">
-      <b-button id="add" v-on:click="favorite()" class="whitheButton" block variant="white"
-        >Recordar en favoritos <b-icon v-bind:icon="isFavorite ? 'star-fill' : 'star'" id="star"
+      <b-button
+        id="add"
+        v-on:click="favorite()"
+        class="whitheButton"
+        block
+        variant="white"
+        >Recordar en favoritos
+        <b-icon v-bind:icon="isFavorite ? 'star-fill' : 'star'" id="star"
       /></b-button>
     </div>
     <div id="button">
@@ -61,25 +67,25 @@ export default {
     return {
       header: "Registrar visita",
       count: 0,
-      isFavorite: false
+      isFavorite: false,
     };
   },
-  methods:{
-    add: function(){
-      this.count++
+  methods: {
+    add: function () {
+      this.count++;
     },
-    remove: function(){
-      this.count != 0 ? this.count-- : this.count = 0
+    remove: function () {
+      this.count != 0 ? this.count-- : (this.count = 0);
     },
-    favorite: function (){
-      this.isFavorite ? this.isFavorite=false : this.isFavorite=true
-    }
-  }
+    favorite: function () {
+      this.isFavorite ? (this.isFavorite = false) : (this.isFavorite = true);
+    },
+  },
 };
 </script>
 
 <style scoped>
-label{
+label {
   font-size: 1.5rem;
 }
 #matricula {
@@ -90,6 +96,7 @@ label{
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 1rem;
+  align-content: center;
 }
 #counter {
   display: flex;
@@ -99,6 +106,7 @@ label{
 #vehiculoSwitch {
   display: flex;
   justify-content: space-between;
+  align-content: center;
 }
 #carContainer {
   display: flex;
@@ -136,7 +144,7 @@ label{
   border-radius: 3px 3px 3px 3px;
 }
 #add {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 42%);
   font-weight: 600;
   color: #616469;
@@ -160,7 +168,7 @@ label{
   justify-content: space-between;
   margin-bottom: 1rem;
 }
-h4{
+h4 {
   font-weight: 600;
 }
 </style>

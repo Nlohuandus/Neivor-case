@@ -49,7 +49,7 @@ export default {
     previousStep: function () {
       this.index === 0
         ? this.$router.push("/")
-        : this.index === 4
+        : this.index === 3
         ? this.$router.push("/")
         : this.index--;
     },

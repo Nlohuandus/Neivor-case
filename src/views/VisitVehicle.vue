@@ -57,7 +57,7 @@
     </div>
 
     <div id="buttons">
-      <b-button block v-on:click="nextStep">Siguiente</b-button>
+      <b-button id="siguiente" block v-on:click="nextStep">Siguiente</b-button>
     </div>
   </div>
 </template>
@@ -124,12 +124,15 @@ label[for="plate"] {
 }
 .btn-secondary {
   position: relative;
-  top: 28.8vh;
+  top: 27.8vh;
   background-color: #fc5859;
   border: none;
   font-size: 1.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#siguiente{
+  font-size: 1.3rem;
 }
 </style>

@@ -94,6 +94,6 @@ h2 {
 }
 #buttons {
   position: relative;
-  top: 1rem;
+  top: 0.7rem;
 }
 </style>
