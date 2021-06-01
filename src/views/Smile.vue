@@ -12,7 +12,7 @@
     </div>
     <!-- conditional to reuse code, based in the current url -->
     <div v-if="isNoCode()" id="buttons">
-        <b-button block v-on:click="nextStep">Siguiente</b-button>
+        <b-button id="noCode" block v-on:click="nextStep">Siguiente</b-button>
     </div>
     <div v-else id="buttons">
         <b-button block v-on:click="nextStep">Siguiente</b-button>
@@ -61,6 +61,10 @@ h2 {
   margin-bottom: 2rem;
   font-weight: 600;
 }
+#noCode{
+  position: relative;
+  top: 3.6rem;
+}
 #image {
   display: flex;
   flex-direction: row;
@@ -71,13 +75,15 @@ h2 {
 .btn-secondary {
   background-color: #fc5859;
   border: none;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 1.3rem;
 }
 #omitir {
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 600;
+  font-size: 1.3rem;
 }
 #siguiente {
   margin-bottom: 1rem;

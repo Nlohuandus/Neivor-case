@@ -47,7 +47,7 @@
     </div>
 
     <div id="buttons">
-      <b-button block v-on:click="nextStep">Siguiente</b-button>
+      <b-button id="button" block v-on:click="nextStep">Siguiente</b-button>
     </div>
   </div>
 </template>
@@ -109,5 +109,8 @@ label[for="visitType"] {
   top: 20.5vh;
   background-color: #fc5859;
   border: none;
+}
+#button{
+  font-size: 1.3rem;
 }
 </style>

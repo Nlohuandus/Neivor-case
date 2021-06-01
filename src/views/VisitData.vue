@@ -14,7 +14,7 @@
       <b-input placeholder="999 999 999" id="dni" />
     </div>
     <div id="buttons">
-      <b-button block v-on:click="nextStep">Siguiente</b-button>
+      <b-button id="siguiente" block v-on:click="nextStep">Siguiente</b-button>
     </div>
   </div>
 </template>
@@ -43,8 +43,6 @@ export default {
   margin-bottom: 1rem;
 }
 #inputs {
-  margin-right: 1rem;
-  margin-left: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,9 +59,13 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  font-weight: 600;
 }
 #buttons {
   position: relative;
   top: 32vh;
+}
+#siguiente{
+font-size: 1.3rem;
 }
 </style>

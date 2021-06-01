@@ -3,7 +3,7 @@
     <NavBar :header="header" :previousStep="previousStep" />
     <div id="data">
       <div>
-        <h4>Carlos Villa</h4>
+        <h4 id="carlos">Carlos Villa</h4>
         <p>DNI<br />999 999 999</p>
       </div>
       <div id="image">
@@ -42,13 +42,16 @@ export default {
   },
   data() {
     return {
-      header: "Registrar Visita", //set navbar title
+      header: "Registrar visita", //set navbar title
     };
   },
 };
 </script>
 
 <style scoped>
+#carlos{
+  font-weight: 600;
+}
 #carmini {
   padding: 0.5rem;
   width: 3.5rem;
@@ -85,10 +88,11 @@ export default {
 .btn-secondary {
   background-color: #fc5859;
   border: none;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 1.3rem;
 }
 #buttons {
   position: relative;
-  top: 6rem;
+  top: 7rem;
 }
 </style>

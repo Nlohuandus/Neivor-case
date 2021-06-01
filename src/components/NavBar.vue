@@ -59,8 +59,10 @@ export default {
   cursor: pointer;
 }
 .navbar-brand {
-  font-size: 1.5rem;
-  margin-top: 0.2rem;
+  font-size: 1.3rem;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
   color: #f1f1f1;
+  font-weight: 500;
 }
 </style>

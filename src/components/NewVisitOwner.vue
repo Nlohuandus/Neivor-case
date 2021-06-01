@@ -21,6 +21,7 @@
       :nextStep="nextStep"
       :previousStep="previousStep"
       :progress="90"
+      :backToZero="backToZero"
     />
   </div>
   <div v-else-if="index === 4">
@@ -63,6 +64,9 @@ export default {
         ? this.$router.push("/")
         : this.index--;
     },
+    backToZero: function (){
+      this.index = 0
+    }
   },
 };
 </script>

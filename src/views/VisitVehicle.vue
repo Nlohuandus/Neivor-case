@@ -8,9 +8,48 @@
       <h1>¿Que vehiculo usa?</h1>
     </div>
     <div id="iconGroup">
-      <b-img id="car" src="../assets/car.svg" />
-      <b-img id="bike" src="../assets/bike.svg" />
-      <b-img id="moto" src="../assets/moto.svg" />
+      <b-img
+        v-on:click="onSelect"
+        v-bind:style="
+          selected === 'car'
+            ? { backgroundColor: '#34ac9c', border: 'none' }
+            : {
+                backgroundColor: '#ffffff',
+                borderRadius: '8px 8px 8px 8px',
+                borderColor: '#515459',
+              }
+        "
+        id="car"
+        src="../assets/car.svg"
+      />
+      <b-img
+        v-on:click="onSelect"
+        v-bind:style="
+          selected === 'bike'
+            ? { backgroundColor: '#34ac9c', border: 'none' }
+            : {
+                backgroundColor: '#ffffff',
+                borderRadius: '8px 8px 8px 8px',
+                borderColor: '#515459',
+              }
+        "
+        id="bike"
+        src="../assets/bike.svg"
+      />
+      <b-img
+        v-on:click="onSelect"
+        v-bind:style="
+          selected === 'moto'
+            ? { backgroundColor: '#34ac9c', border: 'none' }
+            : {
+                backgroundColor: '#ffffff',
+                borderRadius: '8px 8px 8px 8px',
+                borderColor: '#515459',
+              }
+        "
+        id="moto"
+        src="../assets/moto.svg"
+      />
     </div>
     <div id="input">
       <label for="plate">Matricula</label>
@@ -35,10 +74,17 @@ export default {
   data() {
     return {
       header: "Registrar visita",
+      selected: "car",
     };
   },
   components: {
     NavBar,
+  },
+  methods: {
+    onSelect: function (e) {
+      e.preventDefault();
+      this.selected = e.target.id;
+    },
   },
 };
 </script>
@@ -52,7 +98,6 @@ export default {
 }
 #car {
   padding: 1rem;
-  background: #34ac9c;
   border-radius: 8px 8px 8px 8px;
 }
 #moto,
@@ -61,7 +106,8 @@ export default {
   width: 6rem;
 }
 #bike,
-#moto {
+#moto,
+#car {
   padding: 1rem;
   border: solid 1.5px;
   border-radius: 8px 8px 8px 8px;
@@ -81,5 +127,9 @@ label[for="plate"] {
   top: 28.8vh;
   background-color: #fc5859;
   border: none;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

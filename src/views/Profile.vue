@@ -31,8 +31,14 @@
       </div>
     </div>
     <div id="buttons">
-      <b-button id="favorite" class="whiteButton" block variant="white"
-        >Quitar de favoritos <b-icon id="star" icon="star-fill"
+      <b-button
+        id="favorite"
+        v-on:click="favorite"
+        class="whiteButton"
+        block
+        variant="white"
+        >Quitar de favoritos
+        <b-icon id="star" v-bind:icon="isFavorite ? 'star-fill' : 'star'"
       /></b-button>
       <b-button class="redButton" id="listo" block to="/success"
         >Listo</b-button
@@ -50,8 +56,14 @@ export default {
   },
   data() {
     return {
-      header: "Registrar visita", //set navbar title
+      header: "Registrar visita", //set navbar title,
+      isFavorite: false,
     };
+  },
+  methods: {
+    favorite: function () {
+      this.isFavorite ? (this.isFavorite = false) : (this.isFavorite = true);
+    },
   },
 };
 </script>
@@ -60,11 +72,15 @@ export default {
 #textContainer {
   margin-top: 2rem;
 }
+#listo {
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #name {
   font-weight: 600;
-}
-#dni {
-  font-weight: 400;
 }
 #dateContainer {
   display: flex;
@@ -96,6 +112,8 @@ label[for="acompañante"] {
 #favorite {
   margin-bottom: 1rem;
   font-weight: 600;
+  font-size: 1.3rem;
+  color: #616469;
 }
 .b-form-btn-label-control.form-control {
   flex-direction: row-reverse;

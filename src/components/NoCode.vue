@@ -52,7 +52,7 @@ export default {
       this.index === 0
         ? this.$router.push("/")
         : this.index === 4
-        ? this.$router.push("/nocode")
+        ? this.$router.push("/")
         : this.index--;
     },
   },

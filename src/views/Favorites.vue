@@ -53,7 +53,6 @@ export default {
   border: solid rgb(177, 177, 177) 1px;
 }
 #link {
-  margin-left: 1rem;
   width: 90vw;
   height: 13vh;
   box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 25%);
@@ -72,7 +71,7 @@ export default {
   border-radius: 5px 5px 5px;
 }
 #name {
-  font-weight: 500;
+  font-weight: 600;
 }
 #name,
 #dni {

@@ -11,12 +11,12 @@
       </div>
       <div id="buttons">
         <b-button id="button" class="whiteButton" to="/registerowner" block variant="white">
-          <div><b-icon id="person" icon="person" />Propietario</div>
-          <b-icon id="chevron" icon="chevron-right"
+          <div><b-icon scale="1.5" id="person" icon="person" />Propietario</div>
+          <b-icon scale="1.5" id="chevron" icon="chevron-right"
         /></b-button>
         <b-button id="button" class="whiteButton" block variant="white" to="/registervigilant">
-          <div><b-icon id="person" icon="person" />Vigilante</div>
-          <b-icon id="chevron" icon="chevron-right"
+          <div><b-icon scale="1.5" id="person" icon="person" />Vigilante</div>
+          <b-icon scale="1.5" id="chevron" icon="chevron-right"
         /></b-button>
       </div>
     </div>
@@ -44,16 +44,16 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  top: 45vh;
+  top: 40vh;
 }
 #button {
   box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 42%);
-  font-family: "Jost", sans-serif;
   font-weight: 600;
   color: #616469;
   text-align: left;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 h1 {
   font-weight: 600;
@@ -67,7 +67,7 @@ h1 {
 }
 #person {
   position: relative;
-  margin-right: 1vh;
+  margin-right: 2vh;
   color: black;
 }
 #chevron {

@@ -11,7 +11,7 @@
         <h4>Carlos Villa</h4>
         <p>DNI<br />999 999 999</p>
       </div>
-      <b-icon icon="pencil-fill" />
+      <b-icon icon="pencil-fill" v-on:click="backToZero()"/>
     </div>
     <div id="vehiculoSwitch">
       <label for="vehiculo">Vehiculo</label>
@@ -22,20 +22,20 @@
       <div>
         <p id="matricula">Matricula<br />999 999 999</p>
       </div>
-      <b-icon icon="pencil-fill" />
+      <b-icon icon="pencil-fill" v-on:click="previousStep()" />
     </div>
     <div id="company">
       <label for="acompañantes">Acompañantes</label
       ><b-checkbox id="acompañantes" size="lg" switch />
     </div>
     <div id="counter">
-      <b-img id="minus" src="../assets/minus.svg" />
-      <h2 id="number">2</h2>
-      <b-img id="plus" src="../assets/plus.svg" />
+      <b-img v-on:click="remove()" id="minus" src="../assets/minus.svg" />
+      <h2 id="number">{{count}}</h2>
+      <b-img v-on:click="add()" id="plus" src="../assets/plus.svg" />
     </div>
     <div id="favorite">
-      <b-button id="add" class="whitheButton" block variant="white"
-        >Recordar en favoritos <b-icon id="star" icon="star"
+      <b-button id="add" v-on:click="favorite()" class="whitheButton" block variant="white"
+        >Recordar en favoritos <b-icon v-bind:icon="isFavorite ? 'star-fill' : 'star'" id="star"
       /></b-button>
     </div>
     <div id="button">
@@ -51,6 +51,7 @@ export default {
   props: {
     nextStep: Function,
     previousStep: Function,
+    backToZero: Function,
     progress: Number,
   },
   components: {
@@ -59,12 +60,28 @@ export default {
   data() {
     return {
       header: "Registrar visita",
+      count: 0,
+      isFavorite: false
     };
   },
+  methods:{
+    add: function(){
+      this.count++
+    },
+    remove: function(){
+      this.count != 0 ? this.count-- : this.count = 0
+    },
+    favorite: function (){
+      this.isFavorite ? this.isFavorite=false : this.isFavorite=true
+    }
+  }
 };
 </script>
 
 <style scoped>
+label{
+  font-size: 1.5rem;
+}
 #matricula {
   margin-left: -8rem;
 }
@@ -78,7 +95,6 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 2rem;
 }
 #vehiculoSwitch {
   display: flex;
@@ -100,7 +116,7 @@ export default {
 #number {
   width: 2rem;
   height: 2rem;
-  border: solid 1px rgb(94, 94, 94);
+  border: solid 1px rgb(105, 104, 104);
   text-align: center;
   font-size: 1.5rem;
   border-radius: 5px 5px 5px 5px;
@@ -127,15 +143,24 @@ export default {
   justify-content: space-between;
   display: flex;
   text-align: left;
+  font-size: 1.3rem;
 }
 .btn-secondary {
   background-color: #fc5859;
   border: none;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
 }
 #data {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 1rem;
+}
+h4{
+  font-weight: 600;
 }
 </style>

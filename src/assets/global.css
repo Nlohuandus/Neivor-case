@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost');
+
 .progress-bar,
 .btn-secondary {
   background-color: #fc5859;
@@ -9,6 +11,8 @@
 .progress {
   overflow: visible;
   margin-bottom: 1rem;
+  background-color: #ffffff;
+  height: 1.2rem;
 }
 .navbar,
 .progress-bar,
@@ -36,6 +40,7 @@ input::-webkit-calendar-picker-indicator {
   display: flex;
   justify-content: space-between;
   color: #515459;
+  height: 3rem;
 }
 #buttons{
   display: flex;
@@ -45,14 +50,13 @@ input::-webkit-calendar-picker-indicator {
 }
 #navBar {
   background: #ff7172;
-  font-family: "Jost", sans-serif;
   font-weight: 500;
   color: #ffffff;
   display: flex;
-  box-shadow: 0px 2px 12px 1px rgba(0, 0, 0, 0.479);
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.479);
 }
 html * {
-  font-family: "Jost", sans-serif;
+  font-family: "Jost";
 }
 a, a:hover {
   text-decoration: none;
@@ -73,8 +77,8 @@ body {
 }
 .custom-switch.b-custom-control-lg .custom-control-label::before,
 .input-group-lg .custom-switch .custom-control-label::before {
-  top: 0.25rem;
-  height: 1.5rem;
+  top: 0.2rem;
+  height: 1.7rem;
   left: -4.2rem;
   width: 3.6rem;
   border-radius: 1.625rem;
@@ -85,11 +89,11 @@ body {
 .input-group-lg .custom-switch .custom-control-label::after {
   top: calc(0.3125rem + -1px);
   left: calc(-2.8125rem + -23px);
-  width: calc(1.25rem - -4px);
-  height: calc(1.25rem - -4px);
+  width: calc(1.25rem - -7px);
+  height: calc(1.25rem - -7px);
   border-radius: 15.625rem;
   background-size: 50% 50%;
-  background-color: #f1f1f1;
+  background-color: white;
   border: solid 1px;
   box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 25%);
 }
@@ -103,6 +107,6 @@ body {
   .custom-switch
   .custom-control-input:checked
   ~ .custom-control-label::after {
-  transform: translateX(2.5rem);
+  transform: translateX(1.89rem);
   border: none;
 }

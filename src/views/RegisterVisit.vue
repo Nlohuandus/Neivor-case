@@ -19,8 +19,8 @@
           block
           variant="white"
           to="/favorites"
-          ><div><b-icon id="star" icon="star-fill" />{{ button1 }}</div>
-          <b-icon id="chevron" icon="chevron-right"
+          ><div><b-icon scale="1.5" id="star" icon="star-fill" />{{ button1 }}</div>
+          <b-icon scale="1.5" id="chevron" icon="chevron-right"
         /></b-button>
         <b-button
           class="whiteButton"
@@ -28,8 +28,8 @@
           block
           variant="white"
           to="/newVisitOwner"
-          ><div><b-icon id="icon" icon="person-plus" />{{ button2 }}</div>
-          <b-icon id="chevron" icon="chevron-right"
+          ><div><b-icon scale="1.5" id="icon" icon="person-plus" />{{ button2 }}</div>
+          <b-icon scale="1.5" id="chevron" icon="chevron-right"
         /></b-button>
       </div>
       <div id="buttons" v-else>
@@ -40,7 +40,7 @@
           variant="white"
           to="/hascode"
           ><div><b-img id="star" src="../assets/QR.svg" />{{ button1 }}</div>
-          <b-icon id="chevron" icon="chevron-right"
+          <b-icon scale="1.5" id="chevron" icon="chevron-right"
         /></b-button>
         <b-button
           class="whiteButton"
@@ -48,8 +48,8 @@
           block
           variant="white"
           to="/nocode"
-          ><div><b-icon id="icon" icon="person-plus" />{{ button2 }}</div>
-          <b-icon id="chevron" icon="chevron-right"
+          ><div><b-icon scale="1.5" id="icon" icon="person-plus" />{{ button2 }}</div>
+          <b-icon scale="1.5" id="chevron" icon="chevron-right"
         /></b-button>
       </div>
     </div>
@@ -106,14 +106,16 @@ h1 {
   text-align: left;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
 }
 #icon,
 #star {
-  margin-right: 1.5vh;
+  margin-right: 2vh;
 }
 #chevron,
 #icon {
-  color: black;
+  color: #515459;
 }
 #star {
   color: #f4b223;
